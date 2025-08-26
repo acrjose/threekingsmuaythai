@@ -91,45 +91,47 @@
         <p class="video-caption">Experience the energy and discipline of our training sessions</p>
       </div>
 
-      <!-- Photo Gallery -->
+      <!-- Photo Slideshow -->
       <div class="photo-gallery">
         <h3>Training Photos</h3>
-        <div class="gallery-grid">
-          <div class="gallery-item">
+        <div class="slideshow-container">
+          <div class="slide active">
             <img src="training1.jpg" alt="Kids Muay Thai Class">
-            <div class="gallery-overlay">
-              <span>Kids Training</span>
-            </div>
+            <div class="slide-caption">Kids Training - Building confidence and discipline</div>
           </div>
-          <div class="gallery-item">
+          <div class="slide">
             <img src="training2.jpg" alt="Adult Muay Thai Session">
-            <div class="gallery-overlay">
-              <span>Adult Classes</span>
-            </div>
+            <div class="slide-caption">Adult Classes - Fitness and self-defense</div>
           </div>
-          <div class="gallery-item">
+          <div class="slide">
             <img src="training3.jpg" alt="Pad Work Training">
-            <div class="gallery-overlay">
-              <span>Pad Work</span>
-            </div>
+            <div class="slide-caption">Pad Work - Technique and timing</div>
           </div>
-          <div class="gallery-item">
+          <div class="slide">
             <img src="training4.jpg" alt="Technique Practice">
-            <div class="gallery-overlay">
-              <span>Technique Practice</span>
-            </div>
+            <div class="slide-caption">Technique Practice - Perfecting your form</div>
           </div>
-          <div class="gallery-item">
+          <div class="slide">
             <img src="training5.jpg" alt="Family Training">
-            <div class="gallery-overlay">
-              <span>Family Sessions</span>
-            </div>
+            <div class="slide-caption">Family Sessions - Training together</div>
           </div>
-          <div class="gallery-item">
+          <div class="slide">
             <img src="training6.jpg" alt="Competition Team">
-            <div class="gallery-overlay">
-              <span>Competition Team</span>
-            </div>
+            <div class="slide-caption">Competition Team - Elite training</div>
+          </div>
+          
+          <!-- Navigation arrows -->
+          <button class="slide-btn slide-prev" onclick="changeSlide(-1)">‹</button>
+          <button class="slide-btn slide-next" onclick="changeSlide(1)">›</button>
+          
+          <!-- Dots indicator -->
+          <div class="slide-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
           </div>
         </div>
       </div>
@@ -140,62 +142,54 @@
   <section id="schedule">
     <div class="container">
       <h2>Weekly Class Schedule</h2>
-      <div class="schedule-compact">
-        <div class="schedule-day">
-          <h3>Monday & Wednesday</h3>
-          <div class="time-slot">
-            <span class="time">4:00-5:30 PM</span>
-            <span class="class-type">Kids Muay Thai</span>
-            <span class="age-group kids">Ages 6-12</span>
+      <div class="unified-schedule">
+        <div class="schedule-header">
+          <h3>All Classes - Choose What Works For You</h3>
+          <p>Multiple times throughout the week to fit your family's schedule</p>
+        </div>
+        
+        <div class="schedule-grid">
+          <div class="schedule-item">
+            <div class="schedule-time">Mon-Fri 4:00-5:30 PM</div>
+            <div class="schedule-class">Kids Muay Thai</div>
+            <div class="age-group kids">Ages 6-12</div>
           </div>
-          <div class="time-slot">
-            <span class="time">6:00-8:00 PM</span>
-            <span class="class-type">Adult Training</span>
-            <span class="age-group adults">All Ages</span>
+          <div class="schedule-item">
+            <div class="schedule-time">Mon-Fri 6:00-7:00 PM</div>
+            <div class="schedule-class">Cardio</div>
+            <div class="age-group adults">All Ages</div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">Mon-Fri 7:00-8:00 PM</div>
+            <div class="schedule-class">Muay Thai</div>
+            <div class="age-group kids">All Ages</div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">Tuesday 8:00-9:00 PM</div>
+            <div class="schedule-class">Drill Sparring</div>
+            <div class="age-group adults">All Ages</div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">Wednesday 8:00-9:00 PM</div>
+            <div class="schedule-class">Technical Sparring</div>
+            <div class="age-group kids">All Ages</div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">Thursday 8:00-9:00 PM</div>
+            <div class="schedule-class">Advanced Sparring</div>
+            <div class="age-group adults">All Ages</div>
+          </div>
+          <div class="schedule-item weekend">
+            <div class="schedule-time">Saturday 12:00-2:00 PM</div>
+            <div class="schedule-class">Open Training</div>
+            <div class="age-group all">All Ages & Levels</div>
           </div>
         </div>
-
-        <div class="schedule-day">
-          <h3>Tuesday & Thursday</h3>
-          <div class="time-slot">
-            <span class="time">5:00-6:00 PM</span>
-            <span class="class-type">Kids Muay Thai</span>
-            <span class="age-group kids">Ages 6-12</span>
-          </div>
-          <div class="time-slot">
-            <span class="time">7:00-8:00 PM</span>
-            <span class="class-type">All Levels</span>
-            <span class="age-group adults">All Ages</span>
-          </div>
+        
+        <div class="schedule-note">
+          <p><strong>New Students:</strong> Can join any class - we'll work with your skill level!</p>
+          <p><strong>Make-up Classes:</strong> Missed a class? Attend any other session the same week.</p>
         </div>
-
-        <div class="schedule-day">
-          <h3>Friday</h3>
-          <div class="time-slot">
-            <span class="time">5:00-6:00 PM</span>
-            <span class="class-type">Kids Muay Thai</span>
-            <span class="age-group kids">Ages 6-12</span>
-          </div>
-          <div class="time-slot">
-            <span class="time">7:00-8:00 PM</span>
-            <span class="class-type">All Levels</span>
-            <span class="age-group adults">All Ages</span>
-          </div>
-        </div>
-
-        <div class="schedule-day weekend">
-          <h3>Saturday</h3>
-          <div class="time-slot">
-            <span class="time">12:00-2:00 PM</span>
-            <span class="class-type">Open Training</span>
-            <span class="age-group all">All Ages & Levels</span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="schedule-note">
-        <p><strong>New Students:</strong> Can join any class - we'll work with your skill level!</p>
-        <p><strong>Make-up Classes:</strong> Missed a class? Attend any other session the same week.</p>
       </div>
     </div>
   </section>
@@ -280,8 +274,8 @@
         <div class="contact-info">
           <div class="contact-item">
             <h3>📍 Location</h3>
-            <p>Fresno, California<br>
-            <small>Exact address provided upon scheduling</small></p>
+            <p>Fresno, California</p>
+            <small>Exact address provided upon scheduling</small>
           </div>
           
           <div class="contact-item">
@@ -297,13 +291,32 @@
           
           <div class="contact-item">
             <h3>🕐 Questions?</h3>
-            <p>Monday-Friday: 9 AM - 8 PM<br>
-            Saturday: 9 AM - 3 PM</p>
+            <p>Monday-Friday: 9 AM - 8 PM<br>Saturday: 9 AM - 3 PM</p>
           </div>
         </div>
         
         <div class="contact-info">
-          <h3 style="color: #39ff14; margin-bottom: 1rem;">Ready to Start?</h3>
+          <div class="contact-ready">
+            <h3>Ready to Start?</h3>
+            <p>Book your <strong style="color: #39ff14;">FREE trial class</strong> today! Come meet our instructors, see our facility, and experience what makes Three Kings special.</p>
+            
+            <div class="bring-list">
+              <h4>What to Bring:</h4>
+              <ul>
+                <li>Comfortable workout clothes</li>
+                <li>Water bottle</li>
+                <li>Positive attitude!</li>
+              </ul>
+              <em>All training equipment provided</em>
+            </div>
+            
+            <a href="tel:(559)XXX-XXXX" class="btn" style="display: inline-block; margin-bottom: 1rem;">Call Now: (559) XXX-XXXX</a>
+            <p style="color: #888; font-size: 0.9rem;">or email us to schedule your visit</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>?</h3>
           <p style="margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.6; color: #ccc;">
             Book your <strong style="color: #39ff14;">FREE trial class</strong> today! Come meet our instructors, see our facility, and experience what makes Three Kings special.
           </p>
