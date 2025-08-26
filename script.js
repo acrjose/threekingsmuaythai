@@ -1,5 +1,7 @@
 // Three Kings Muay Thai Website JavaScript
 
+let slideIndex = 1;
+
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling for anchor links
@@ -21,75 +23,72 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Gallery functionality
-    initializeGallery();
+    // Initialize slideshow
+    initializeSlideshow();
     
     // Add scroll animations
     initializeScrollAnimations();
 });
 
-// Gallery Modal Functionality
-function initializeGallery() {
-    const galleryItems = document.querySelectorAll('.gallery-item');
-    const modal = createModal();
+// Slideshow functionality
+function initializeSlideshow() {
+    showSlide(slideIndex);
     
-    galleryItems.forEach(item => {
-        item.addEventListener('click', function() {
-            const img = this.querySelector('img');
-            const caption = this.querySelector('.gallery-overlay span').textContent;
-            openModal(modal, img.src, img.alt, caption);
-        });
-    });
-}
-
-function createModal() {
-    const modal = document.createElement('div');
-    modal.className = 'gallery-modal';
-    modal.innerHTML = `
-        <div class="gallery-modal-content">
-            <span class="gallery-close">&times;</span>
-            <img src="" alt="">
-            <div class="modal-caption"></div>
-        </div>
-    `;
-    
-    document.body.appendChild(modal);
-    
-    // Close modal when clicking the X or outside the image
-    const closeBtn = modal.querySelector('.gallery-close');
-    closeBtn.addEventListener('click', () => closeModal(modal));
-    
-    modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-            closeModal(modal);
+    // Auto-advance slideshow every 5 seconds
+    setInterval(function() {
+        slideIndex++;
+        if (slideIndex > document.querySelectorAll('.slide').length) {
+            slideIndex = 1;
         }
-    });
-    
-    // Close modal with Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            closeModal(modal);
-        }
-    });
-    
-    return modal;
+        showSlide(slideIndex);
+    }, 5000);
 }
 
-function openModal(modal, src, alt, caption) {
-    const img = modal.querySelector('img');
-    const captionDiv = modal.querySelector('.modal-caption');
-    
-    img.src = src;
-    img.alt = alt;
-    captionDiv.textContent = caption;
-    
-    modal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
+function changeSlide(n) {
+    slideIndex += n;
+    const slides = document.querySelectorAll('.slide');
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+    if (slideIndex < 1) {
+        slideIndex = slides.length;
+    }
+    showSlide(slideIndex);
 }
 
-function closeModal(modal) {
-    modal.style.display = 'none';
-    document.body.style.overflow = 'auto';
+function currentSlide(n) {
+    slideIndex = n;
+    showSlide(slideIndex);
+}
+
+function showSlide(n) {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+    
+    // Hide all slides
+    slides.forEach(slide => {
+        slide.classList.remove('active');
+    });
+    
+    // Remove active class from all dots
+    dots.forEach(dot => {
+        dot.classList.remove('active');
+    });
+    
+    // Show current slide and highlight current dot
+    if (slides[slideIndex - 1]) {
+        slides[slideIndex - 1].classList.add('active');
+    }
+    if (dots[slideIndex - 1]) {
+        dots[slideIndex - 1].classList.add('active');
+    }
 }
 
 // Scroll Animations
@@ -108,7 +107,7 @@ function initializeScrollAnimations() {
     }, observerOptions);
 
     // Observe elements for animation
-    const animateElements = document.querySelectorAll('.benefit, .pricing-card, .schedule-day, .gallery-item');
+    const animateElements = document.querySelectorAll('.benefit, .pricing-card, .schedule-item, .slideshow-container');
     animateElements.forEach(el => {
         observer.observe(el);
     });
@@ -117,7 +116,7 @@ function initializeScrollAnimations() {
 // Add CSS animations
 const style = document.createElement('style');
 style.textContent = `
-    .benefit, .pricing-card, .schedule-day, .gallery-item {
+    .benefit, .pricing-card, .schedule-item, .slideshow-container {
         opacity: 0;
         transform: translateY(20px);
         transition: opacity 0.6s ease, transform 0.6s ease;
@@ -128,12 +127,8 @@ style.textContent = `
         transform: translateY(0);
     }
     
-    .modal-caption {
-        text-align: center;
-        color: #39ff14;
-        font-weight: bold;
-        margin-top: 1rem;
-        font-size: 1.2rem;
+    .slide {
+        transition: opacity 0.5s ease-in-out;
     }
 `;
 document.head.appendChild(style);
