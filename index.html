@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three Kings Muay Thai | Fresno's Premier Martial Arts for Kids & Adults</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav-menu">
+    <div class="container">
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#schedule">Classes</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#safety">Safety</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <img src="threekingsmuaythai.jpeg" alt="Three Kings Muay Thai Logo" class="logo">
+      <h1>Three Kings Muay Thai</h1>
+      <p class="tagline">Building Confidence, Discipline & Fitness for Kids & Adults in Fresno</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn">Free Trial Week</a>
+        <a href="#schedule" class="btn btn-outline">View Classes</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About / Benefits Section -->
+  <section id="about">
+    <div class="container">
+      <h2>Why Parents Choose Three Kings</h2>
+      <div class="benefits">
+        <div class="benefit">
+          <div class="benefit-icon">🛡️</div>
+          <h3>Safe Environment</h3>
+          <p>Certified instructors, proper equipment, and a focus on controlled, safe training for all ages.</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">💪</div>
+          <h3>Builds Confidence</h3>
+          <p>Kids learn self-defense while building self-esteem, discipline, and respect for others.</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">👥</div>
+          <h3>All Skill Levels</h3>
+          <p>From complete beginners to experienced students - everyone trains at their own pace.</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">🏆</div>
+          <h3>Character Development</h3>
+          <p>Traditional martial arts values: honor, respect, perseverance, and teamwork.</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">❤️</div>
+          <h3>Family-Friendly</h3>
+          <p>A welcoming community where parents and children can train together.</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">🕐</div>
+          <h3>Flexible Schedule</h3>
+          <p>Multiple class times throughout the week to fit your family's busy schedule.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <div class="container">
+      <h2>See Our Training in Action</h2>
+      
+      <!-- YouTube Video Section -->
+      <div class="video-section">
+        <h3>Watch Our Students Train</h3>
+        <div class="video-container">
+          <iframe 
+            src="https://www.youtube.com/embed/v6suCMG4L0I?si=8LZ-g485fB6OCHaM" 
+            title="Three Kings Muay Thai Training Video"
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p class="video-caption">Experience the energy and discipline of our training sessions</p>
+      </div>
+
+      <!-- Photo Slideshow -->
+      <div class="photo-gallery">
+        <h3>Training Photos</h3>
+        <div class="slideshow-container">
+          <div class="slide active">
+            <img src="training1.jpg" alt="Kids Muay Thai Class">
+            <div class="slide-caption">Kids Training - Building confidence and discipline</div>
+          </div>
+          <div class="slide">
+            <img src="training2.jpg" alt="Adult Muay Thai Session">
+            <div class="slide-caption">Adult Classes - Fitness and self-defense</div>
+          </div>
+          <div class="slide">
+            <img src="training3.jpg" alt="Pad Work Training">
+            <div class="slide-caption">Pad Work - Technique and timing</div>
+          </div>
+          <div class="slide">
+            <img src="training4.jpg" alt="Technique Practice">
+            <div class="slide-caption">Technique Practice - Perfecting your form</div>
+          </div>
+          <div class="slide">
+            <img src="training5.jpg" alt="Family Training">
+            <div class="slide-caption">Family Sessions - Training together</div>
+          </div>
+          <div class="slide">
+            <img src="training6.jpg" alt="Competition Team">
+            <div class="slide-caption">Competition Team - Elite training</div>
+          </div>
+          
+          <!-- Navigation arrows -->
+          <button class="slide-btn slide-prev" onclick="changeSlide(-1)">‹</button>
+          <button class="slide-btn slide-next" onclick="changeSlide(1)">›</button>
+          
+          <!-- Dots indicator -->
+          <div class="slide-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule Section -->
+  <section id="schedule">
+    <div class="container">
+      <h2>Weekly Class Schedule</h2>
+      <div class="unified-schedule">
+        <div class="schedule-header">
+          <h3>All Classes - Choose What Works For You</h3>
+          <p>Multiple times throughout the week to fit your family's schedule</p>
+        </div>
+        
+        <div class="schedule-grid">
+          <div class="schedule-item">
+            <div class="schedule-time">Mon-Fri 4:00-5:30 PM</div>
+            <div class="schedule-class">Kids Muay Thai</div>
+            <div class="age-group kids">Ages 6-12</div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">Mon-Fri 6:00-7:00 PM</div>
+            <div class="schedule-class">Cardio</div>
+            <div class="age-group adults">All Ages</div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">Mon-Fri 7:00-8:00 PM</div>
+            <div class="schedule-class">Muay Thai</div>
+            <div class="age-group kids">All Ages</div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">Tuesday 8:00-9:00 PM</div>
+            <div class="schedule-class">Drill Sparring</div>
+            <div class="age-group adults">All Ages</div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">Wednesday 8:00-9:00 PM</div>
+            <div class="schedule-class">Technical Sparring</div>
+            <div class="age-group kids">All Ages</div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-time">Thursday 8:00-9:00 PM</div>
+            <div class="schedule-class">Advanced Sparring</div>
+            <div class="age-group adults">All Ages</div>
+          </div>
+          <div class="schedule-item weekend">
+            <div class="schedule-time">Saturday 12:00-2:00 PM</div>
+            <div class="schedule-class">Open Training</div>
+            <div class="age-group all">All Ages & Levels</div>
+          </div>
+        </div>
+        
+        <div class="schedule-note">
+          <p><strong>New Students:</strong> Can join any class - we'll work with your skill level!</p>
+          <p><strong>Make-up Classes:</strong> Missed a class? Attend any other session the same week.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing">
+    <div class="container">
+      <h2>Simple, Affordable Pricing</h2>
+      <div class="pricing">
+        <div class="pricing-card">
+          <h3>Drop-In</h3>
+          <div class="price">Free!</div>
+          <ul class="price-features">
+            <li>Single class</li>
+            <li>Perfect for trying out</li>
+            <li>All equipment provided</li>
+            <li>No commitment</li>
+          </ul>
+          <a href="#contact" class="btn">Try a Class</a>
+        </div>
+
+        <div class="pricing-card popular">
+          <div class="popular-badge">Most Popular</div>
+          <h3>Monthly Unlimited</h3>
+          <div class="price">$130</div>
+          <ul class="price-features">
+            <li>Unlimited classes</li>
+            <li>All age groups</li>
+            <li>Equipment included</li>
+            <li>Family discounts available</li>
+          </ul>
+          <a href="#contact" class="btn">Get Started</a>
+        </div>
+
+        <div class="pricing-card">
+          <h3>8 Classes</h3>
+          <div class="price">Free!</div>
+          <ul class="price-features">
+            <li>8 classes per month</li>
+            <li>Flexible scheduling</li>
+            <li>Great for busy families</li>
+            <li>Classes never expire</li>
+          </ul>
+          <a href="#contact" class="btn">Choose Plan</a>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 2rem;">
+        <p style="color: #ccc; font-size: 1.1rem;"><strong style="color: #39ff14;">Family Discount:</strong> 15% off when 2+ family members join</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety Section -->
+  <section id="safety">
+    <div class="container">
+      <h2>Your Child's Safety is Our Priority</h2>
+      <div class="safety-info">
+        <h3>🛡️ Our Safety Commitment</h3>
+        <p><strong>Certified Instructors:</strong> All our trainers are certified and background-checked</p>
+        <p><strong>Proper Equipment:</strong> High-quality protective gear provided for all students</p>
+        <p><strong>Age-Appropriate Training:</strong> Classes designed specifically for different age groups</p>
+        <p><strong>Controlled Environment:</strong> Emphasis on technique and control over power</p>
+        <p><strong>Injury Prevention:</strong> Proper warm-up, stretching, and safety protocols</p>
+        <p><strong>Positive Atmosphere:</strong> Zero tolerance for bullying or inappropriate behavior</p>
+      </div>
+      
+      <div style="background: rgba(57, 255, 20, 0.05); padding: 2rem; border-radius: 10px; margin-top: 2rem; border: 2px solid rgba(57, 255, 20, 0.2);">
+        <h3 style="color: #39ff14; margin-bottom: 1rem;">What Parents Are Saying</h3>
+        <blockquote style="font-style: italic; color: #ccc; border-left: 4px solid #39ff14; padding-left: 1rem;">
+          "My daughter has been training here for 6 months and I couldn't be happier. The instructors are patient, professional, and really care about each student's development. She's gained so much confidence!"
+        </blockquote>
+        <p style="margin-top: 1rem; font-weight: bold; color: #39ff14;">- Maria S., Parent</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Get Started Today</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <h3>📍 Location</h3>
+            <p>Fresno, California</p>
+            <small>Exact address provided upon scheduling</small>
+          </div>
+          
+          <div class="contact-item">
+            <h3>📞 Phone</h3>
+            <p>(559) XXX-XXXX</p>
+            <small>Call or text for fastest response</small>
+          </div>
+          
+          <div class="contact-item">
+            <h3>📧 Email</h3>
+            <p>info@threekingsmuaythai.com</p>
+          </div>
+          
+          <div class="contact-item">
+            <h3>🕐 Questions?</h3>
+            <p>Monday-Friday: 9 AM - 8 PM<br>Saturday: 9 AM - 3 PM</p>
+          </div>
+        </div>
+        
+        <div class="contact-info">
+          <div class="contact-ready">
+            <h3>Ready to Start?</h3>
+            <p>Book your <strong style="color: #39ff14;">FREE trial class</strong> today! Come meet our instructors, see our facility, and experience what makes Three Kings special.</p>
+            
+            <div class="bring-list">
+              <h4>What to Bring:</h4>
+              <ul>
+                <li>Comfortable workout clothes</li>
+                <li>Water bottle</li>
+                <li>Positive attitude!</li>
+              </ul>
+              <em>All training equipment provided</em>
+            </div>
+            
+            <a href="tel:(559)XXX-XXXX" class="btn" style="display: inline-block; margin-bottom: 1rem;">Call Now: (559) XXX-XXXX</a>
+            <p style="color: #888; font-size: 0.9rem;">or email us to schedule your visit</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>?</h3>
+          <p style="margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.6; color: #ccc;">
+            Book your <strong style="color: #39ff14;">FREE trial class</strong> today! Come meet our instructors, see our facility, and experience what makes Three Kings special.
+          </p>
+          
+          <div style="margin-bottom: 2rem;">
+            <h4 style="color: #39ff14; margin-bottom: 1rem;">What to Bring:</h4>
+            <ul style="color: #ccc; line-height: 1.8;">
+              <li>Comfortable workout clothes</li>
+              <li>Water bottle</li>
+              <li>Positive attitude!</li>
+            </ul>
+            <p style="margin-top: 1rem; color: #888;"><em>All training equipment provided</em></p>
+          </div>
+          
+          <a href="tel:(559)XXX-XXXX" class="btn" style="display: block; text-align: center; margin-bottom: 1rem;">Call Now: (559) XXX-XXXX</a>
+          <p style="text-align: center; color: #888; font-size: 0.9rem;">or email us to schedule your visit</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Three Kings Muay Thai | Fresno, CA | Building Character Through Martial Arts</p>
+      <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Honor • Respect • Discipline</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
